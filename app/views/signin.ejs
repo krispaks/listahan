@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		<%= title %>
+	</title>	
+</head>
+<body>
+	<% for(var i in messages) { %>
+		<div class="flash"><%= messages[i]%></div>
+	<% } %>
+	<a href="/auth/facebook">Sign in with Facebook</a>
+</body>
+</html>

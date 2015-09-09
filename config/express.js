@@ -42,11 +42,10 @@ module.exports = function(){
 	app.use(passport.session());
 	
 	
-	/* Note: Setup routes here
-	require('../app/routes/user.server.routes.js')(app);
-	require('../app/routes/article.server.routes.js')(app);
-	*/
-	
+	/* Note: Setup routes here */
+	require('../app/user/user.server.routes.js')(app);
+	require('../app/budget/budget.server.routes.js')(app);
+		
 	app.use(express.static('./public'))
 	
 	return app;	

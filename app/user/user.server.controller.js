@@ -1,9 +1,22 @@
 var User = require('mongoose').model('user');
 var passport = require('passport');
 
+// user signin, signout
+exports.renderSignin = function(req, res, next){
+	if(!req.user){
+		res.render('signin', {
+			title: 'Sign-in Form',
+			messages: req.flash('error') || req.flash('info')
+		});
+	}
+	else{
+		return res.redirect('/budget');
+	}
+};
+
 exports.signout = function(req, res){
 	req.logout();
-	res.redirect('/');
+	res.redirect('/signin');
 }
 
 exports.requiresLogin = function(req, res, next){

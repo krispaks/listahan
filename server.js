@@ -8,7 +8,7 @@ var db = mongoose();
 var app = express();
 var passport = passportConfig();
 
-app.listen(3000);
+app.listen(4000);
 module.exports = app;
 
 console.log('running in ' + process.env.NODE_ENV + ' mode');
