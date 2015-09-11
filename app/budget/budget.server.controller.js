@@ -13,14 +13,14 @@ exports.list = function(req, res)
 	Budget.find()
 	.sort('-created')
 	.populate('creator', 'firstName lastName fullName')
-	.exec(function(err, articles){
+	.exec(function(err, budget){
 		if(err){
 			return res.status(400).send({
 				message: getErrorMessage(err)
 			});
 		}
 		else{
-			res.json(articles);
+			res.json(budget);
 		}
 	});
 }
