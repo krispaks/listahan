@@ -10,7 +10,7 @@ exports.renderSignin = function(req, res, next){
 		});
 	}
 	else{
-		return res.redirect('/budget');
+		return res.redirect('/');
 	}
 };
 

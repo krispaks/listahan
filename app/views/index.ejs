@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+	<head>
+		<title>Listahan</title>
+	</head>
+	<body>
+		<div>
+			<a href="/signout">Signout</a>
+		</div>		
+		<div>
+			<a href='/#!/budget'>Budget</a>
+		</div>
+		
+		<section ng-view>
+		</section>
+		
+		<script type="text/javascript">
+			window.user = <%- user || 'null' %>
+		</script>
+				
+		<script data-main="app-main" src="/lib/requirejs/require.js"></script>
+	</body>
+</html>

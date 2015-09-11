@@ -5,7 +5,7 @@ define(['angular'], function(angular){
 		
 		$routeProvider
 			.when('/budget', {
-				templateUrl: '/views/list-budget.client.view.html'
+				templateUrl: '/budget/views/list-budget.client.view.html'
 			});
 	}]);
 });
