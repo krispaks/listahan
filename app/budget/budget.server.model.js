@@ -34,4 +34,11 @@ var BudgetSchema = new Schema({
 	}
 });
 
+BudgetSchema.virtual('dateRange')
+.get(function(){
+	return this.dateFrom.toString() + ' - ' + this.dateTo.toString(); 
+});
+
+BudgetSchema.set('toJSON', {getters: true, virtuals: true})
+
 mongoose.model('budget', BudgetSchema);

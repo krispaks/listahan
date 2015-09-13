@@ -41,5 +41,11 @@ define(['angular'], function(angular){
 					$scope.error = errorResponse.data.message;
 				});
 			};
+			
+			vm.initializeBudgetDetail = function(){
+				vm.budgetDetail = Budget.get({
+					budgetId: $routeParams.budgetId
+				});
+			};
 	}]);
 });

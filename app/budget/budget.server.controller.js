@@ -42,6 +42,23 @@ exports.create = function(req, res)
 	});
 }
 
+exports.getById = function(req, res){
+	res.json(req.budget);
+};
+
+exports.budgetById = function(req, res, next, id){
+	Budget.findById(id)
+	.populate('creator', 'firstName lastName fullName')
+	.exec(function(err, data){
+		if(err) return next(err)
+		
+		if(!data) return next(new Error('sailed to load ' + id));
+		
+		req.budget = data;
+		next();
+	});
+};
+
 //private functions
 var getErrorMessage = function(err){
 	if(err.errors){

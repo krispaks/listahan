@@ -21,6 +21,7 @@
 		<table class="table">
 			<thead>
 				<tr>
+					<th>Command</th>
 					<th>Date Range</th>
 					<th>IsFullyPaid</th>
 					<th>Total Expenses</th>
@@ -29,8 +30,11 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>{{budget.dateFrom}}</td>
-					<td>{{budget.isFullyPaid}}</td>
+					<td>
+						<a href="#!/budget/{{budget._id}}">detail</a>  
+					</td>
+					<td data-ng-bind="budget.dateRange"></td>
+					<td data-ng-bind="budget.isFullyPaid"></td>
 					<td>test</td>
 					<td>test</td>
 				</tr>

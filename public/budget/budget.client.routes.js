@@ -13,6 +13,11 @@ define(['angular'], function(angular){
 				templateUrl: '/budget/views/create-budget.client.view.html',
 				controller: 'BudgetController',
 				controllerAs: 'vm'
+			})
+			.when('/budget/:budgetId', {
+				templateUrl: '/budget/views/detail-budget.client.view.html',
+				controller: 'BudgetController',
+				controllerAs: 'vm'
 			});
 	}]);
 });
