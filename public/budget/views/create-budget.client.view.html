@@ -1,0 +1,25 @@
+<div>Budget Create</div>
+<section class="container" data-ng-init="vm.initializeNewBudget()">
+	<!-- Create section -->
+	<form data-ng-submit="vm.create()">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dateRangeFrom">Date From</label>
+					<input type="date" class="form-control" name="dateRangeFrom" id="dateRangeFrom" data-ng-model="vm.budgetDetail.dateRangeFrom">
+					<label for="dateRangeTo">Date To</label>
+					<input type="date" class="form-control" name="dateRangeTo" id="dateRangeTo" data-ng-model="vm.budgetDetail.dateRangeTo">
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="khrisSalary">Khris Salary</label>
+					<input type="text" class="form-control" name="khrisSalary" id="khrisSalary" data-ng-model="vm.budgetDetail.khrisSalary">
+					<label for="rasselSalary">Rassel Salary</label>
+					<input type="text" class="form-control" name="rasselSalary" id="rasselSalary" data-ng-model="vm.budgetDetail.rasselSalary">
+				</div>	
+			</div>
+		</div>
+		<button type="submit">Save</button>
+	</form>
+</section>

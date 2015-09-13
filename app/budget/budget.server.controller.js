@@ -25,6 +25,23 @@ exports.list = function(req, res)
 	});
 }
 
+exports.create = function(req, res)
+{
+	var budget = new Budget(req.body);
+	budget.creator = req.user;
+	
+	budget.save(function(err){
+		if(err){
+			return res.status(400).send({
+				message: getErrorMessage(err)
+			});
+		}
+		else{
+			res.json(budget);
+		}
+	});
+}
+
 //private functions
 var getErrorMessage = function(err){
 	if(err.errors){

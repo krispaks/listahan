@@ -4,8 +4,6 @@ var budgetController = require('./budget.server.controller');
 module.exports = function(app){
 	
 	app.route('/api/budget')
-		.get(budgetController.list);
-	
-	app.route('/budget')
-		.get(budgetController.render);
+		.get(budgetController.list)
+		.post(budgetController.create);
 };

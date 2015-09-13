@@ -5,7 +5,14 @@ define(['angular'], function(angular){
 		
 		$routeProvider
 			.when('/budget', {
-				templateUrl: '/budget/views/list-budget.client.view.html'
+				templateUrl: '/budget/views/list-budget.client.view.html',
+				controller: 'BudgetController',
+				controllerAs: 'vm'
+			})
+			.when('/budget/create', {
+				templateUrl: '/budget/views/create-budget.client.view.html',
+				controller: 'BudgetController',
+				controllerAs: 'vm'
 			});
 	}]);
 });

@@ -4,8 +4,26 @@ var crypto = require('crypto');
 var Schema = mongoose.Schema;
 
 var BudgetSchema = new Schema({
-	expense: String,
-	amount: Number,
+	dateFrom: {
+		type: Date,
+		default: Date.now
+	},
+	dateTo: {
+		type: Date,
+		default: Date.now
+	},
+	khrisSalary: {
+		type: Number,
+		default: 0	
+	},
+	rasselSalary: {
+		type: Number,
+		default: 0
+	},
+	isFullyPaid: {
+		type: Boolean,
+		default: false
+	},
 	created: {
 		type: Date,
 		default: Date.now
