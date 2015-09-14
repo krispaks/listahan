@@ -12,4 +12,4 @@ app.listen(4000);
 module.exports = app;
 
 console.log('running in ' + process.env.NODE_ENV + ' mode');
-console.log('Server running at http://localhost:3000');
+console.log('Server running at http://localhost:4000');

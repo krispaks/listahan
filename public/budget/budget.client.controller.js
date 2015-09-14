@@ -15,7 +15,12 @@ define(['angular'], function(angular){
 			vm.testing = "testing dodo ng cow";
 			
 			vm.find = function(){
-				vm.budgetList = Budget.query();
+				
+				Budget.query(function(data){
+					vm.budgetList = data;
+				}, function(errorResponse){
+					$scope.error = errorResponse.data.message;
+				});
 			};
 			
 			// Events
