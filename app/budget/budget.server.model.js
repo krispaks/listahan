@@ -4,11 +4,11 @@ var crypto = require('crypto');
 var Schema = mongoose.Schema;
 
 var BudgetSchema = new Schema({
-	dateFrom: {
+	dateRangeFrom: {
 		type: Date,
 		default: Date.now
 	},
-	dateTo: {
+	dateRangeTo: {
 		type: Date,
 		default: Date.now
 	},
@@ -36,7 +36,7 @@ var BudgetSchema = new Schema({
 
 BudgetSchema.virtual('dateRange')
 .get(function(){
-	return this.dateFrom.toString() + ' - ' + this.dateTo.toString(); 
+	return this.dateRangeFrom.toString() + ' - ' + this.dateRangeTo.toString(); 
 });
 
 BudgetSchema.set('toJSON', {getters: true, virtuals: true})
