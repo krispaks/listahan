@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var crypto = require('crypto');
+var moment = require('moment');
 
 var Schema = mongoose.Schema;
 
@@ -36,9 +37,13 @@ var BudgetSchema = new Schema({
 
 BudgetSchema.virtual('dateRange')
 .get(function(){
-	return this.dateRangeFrom.toString() + ' - ' + this.dateRangeTo.toString(); 
+	//return moment(this.dateRangeFrom.toString(), 'MM-DD-YYYY') + ' - ' + moment(this.dateRangeTo.toString(), 'MM-DD-YYYY');
+	return moment(this.dateRangeFrom).format('MM.DD.YYYY') + ' - ' + moment(this.dateRangeTo).format('MM.DD.YYYY'); 
 });
 
-BudgetSchema.set('toJSON', {getters: true, virtuals: true})
+BudgetSchema.set('toJSON', {
+	getters: true, 
+	virtuals: true
+});
 
 mongoose.model('budget', BudgetSchema);

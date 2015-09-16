@@ -1,5 +1,7 @@
-define(['angular'], function(angular){
+define(['angular', 'moment'], function(angular, moment){
 	'use strict';
+	
+	moment().format();
 	
 	return angular.module('budget').controller('BudgetController', 
 		['$scope', '$routeParams', '$location', 'Authentication', 'Budget', 
@@ -15,7 +17,6 @@ define(['angular'], function(angular){
 			vm.testing = "testing dodo ng cow";
 			
 			vm.find = function(){
-				
 				Budget.query(function(data){
 					vm.budgetList = data;
 				}, function(errorResponse){
