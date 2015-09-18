@@ -8,6 +8,7 @@ module.exports = function()
 	// Note: update the model here
 	require('../app/user/user.server.model');
 	require('../app/budget/budget.server.model');
+	require('../app/budget/budget.server.modelItem');	
 	
 	return db;
 }

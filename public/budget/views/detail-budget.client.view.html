@@ -3,20 +3,46 @@
 	<!-- Detail section -->
 	<div class="row">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<div class="form-group">
 					<label for="dateRangeFrom">Date From</label>
-					<input type="date" class="form-control" name="dateRangeFrom" id="dateRangeFrom" data-ng-model="vm.budgetDetail.dateRangeFrom">
+					<input type="text" class="form-control" name="dateRangeFrom" id="dtDateRangeFrom" data-ng-model="vm.budgetDetail.dateRangeFrom">
 					<label for="dateRangeTo">Date To</label>
-					<input type="date" class="form-control" name="dateRangeTo" id="dateRangeTo" data-ng-model="vm.budgetDetail.dateRangeTo">
+					<input type="text" class="form-control" name="dateRangeTo" id="dtDateRangeTo" data-ng-model="vm.budgetDetail.dateRangeTo">
+					<label for="isFullyPaid">IsFullyPaid</label>
+					<input type="checkbox" name="isFullyPaid" id="cbIsFullyPaid" data-ng-model="vm.budgetDetail.isFullyPaid">
 				</div>	
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<div class="form-group">
 					<label for="khrisSalary">Khris Salary</label>
-					<input type="text" class="form-control" name="khrisSalary" id="khrisSalary" data-ng-model="vm.budgetDetail.khrisSalary">
+					<input type="text" class="form-control" name="khrisSalary" id="txtKhrisSalary" data-ng-model="vm.budgetDetail.khrisSalary">
+					<label for="rasselSalary">Khris Credit</label>
+					<input type="text" class="form-control" name="khrisCredit" id="txtKhrisCredit" data-ng-model="vm.budgetDetail.khrisCredit">
+					<label for="rasselSalary">Khris Expenses</label>
+					<input type="text" class="form-control" name="khrisExpenseTotal" id="txtKhrisExpenseTotal" data-ng-model="vm.budgetDetail.khrisExpenseTotal">
+					<label for="rasselSalary">Khris Money Left</label>
+					<input type="text" class="form-control" name="khrisMoneyLeft" id="txtKhrisMoneyLeft" data-ng-model="vm.budgetDetail.khrisMoneyLeft">
+				</div>	
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
 					<label for="rasselSalary">Rassel Salary</label>
-					<input type="text" class="form-control" name="rasselSalary" id="rasselSalary" data-ng-model="vm.budgetDetail.rasselSalary">
+					<input type="text" class="form-control" name="rasselSalary" id="txtRasselSalary" data-ng-model="vm.budgetDetail.rasselSalary">
+					<label for="rasselCredit">Rassel Credit</label>
+					<input type="text" class="form-control" name="rasselCredit" id="txRtasselCredit" data-ng-model="vm.budgetDetail.rasselCredit">
+					<label for="rasselExpenseTotal">Rassel Expenses</label>
+					<input type="text" class="form-control" name="rasselExpenseTotal" id="txtRasselExpenseTotal" data-ng-model="vm.budgetDetail.rasselExpenseTotal">
+					<label for="rasselMoneyLeft">Rassel Money Left</label>
+					<input type="text" class="form-control" name="rasselMoneyLeft" id="txtRasselMoneyLeft" data-ng-model="vm.budgetDetail.rasselMoneyLeft">
+				</div>	
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="khrisAmountToGive">Khris Share</label>
+					<input type="text" class="form-control" name="khrisAmountToGive" id="txtRasselAmountToGive" data-ng-model="vm.budgetDetail.khrisAmountToGive">
+					<label for="rasselAmountToGive">Rassel Share</label>
+					<input type="text" class="form-control" name="rasselAmountToGive" id="txtRasselAmountToGive" data-ng-model="vm.budgetDetail.rasselAmountToGive">
 				</div>	
 			</div>
 		</div>

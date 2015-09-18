@@ -34,7 +34,15 @@ define(['angular', 'moment'], function(angular, moment){
 					dateRangeFrom: Date.now(),
 					dateRangeTo: Date.now(),
 					khrisSalary: 0,
-					rasselSalary: 0
+					khrisCredit: 0,
+					khrisExpenseTotal: 0,
+					rasselSalary: 0,
+					rasselCredit: 0,
+					rasselExpenseTotal: 0,
+					isFullyPaid: false,
+					khriAmountToGive: 0,
+					rasselAmountToGive: 0,
+					totalExpenses: 0
 				};
 			};
 			
