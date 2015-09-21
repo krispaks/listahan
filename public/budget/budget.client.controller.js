@@ -57,8 +57,12 @@ define(['angular', 'moment'], function(angular, moment){
 			};
 			
 			vm.initializeBudgetDetail = function(){
-				vm.budgetDetail = Budget.get({
+				Budget.get({
 					budgetId: $routeParams.budgetId
+				}, function(data){
+					vm.budgetDetail = data;
+					vm.budgetDetail.dateRangeFrom = moment(vm.budgetDetail.dateRangeFrom).format('MM.DD.YYYY');
+					vm.budgetDetail.dateRangeTo = moment(vm.budgetDetail.dateRangeTo).format('MM.DD.YYYY');
 				});
 			};
 	}]);

@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var moment = require('moment');
 
 var Schema = mongoose.Schema;
 
@@ -59,6 +60,11 @@ var BudgetSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'user'
 	}
+});
+
+BudgetSchema.virtual('dateRange')
+.get(function(){
+	return moment(this.dateRangeFrom).format('MM.DD.YYYY') + ' - ' + moment(this.dateRangeTo).format('MM.DD.YYYY'); 
 });
 
 BudgetSchema.virtual('khrisMoneyLeft')
